@@ -1,8 +1,19 @@
+// Multi-line comments start with /* and end with */.
+
+/**
+ * Can't find any code standard features. Especially at Indentation
+ */
+
 highestProductOf3 = function (arrayOfInts) {
 
 if(arrayOfInts.length < 3){                 // if provided array has less than 3 values then return false
     console.log('Less than 3 items!');
     return false;
+    /**
+     * Throw Error or Number.NEGATIVE_INFINITY / Number.POSITIVE_INFINITY
+     * Negative number can be compared with `false and also `false` can be compared with 0
+     * console.log(Number(false)) - [Console] : 0
+     */
 }
 
 

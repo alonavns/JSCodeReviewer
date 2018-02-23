@@ -1,3 +1,5 @@
+// Multi-line comments start with /* and end with */.
+
 function highestProductOf3(vectorOfInts)
 {
     if (vectorOfInts.length < 3) {
@@ -33,6 +35,9 @@ function highestProductOf3(vectorOfInts)
             highestProductOf3,
             current * highestProductOf2),
             current * lowestProductOf2);
+        /**
+         * Math.max([value1[, value2[, ...]]])
+         */
 
         // do we have a new highest product of two?
         highestProductOf2 = max(max(

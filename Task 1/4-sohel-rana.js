@@ -1,6 +1,18 @@
+// Multi-line comments start with /* and end with */.
+
 /**
  * finds the highest product of the three items passed in
  * @param arrayOfInts<type array>
+ */
+
+/**
+ * 
+ * Comment should be as follow if you decided to write.
+ * 
+ * @type {function} highestProductOf3
+ * @param {array} arrayOfInts
+ * @returns {number}
+ * @description Finds the highest product of the three items passed in.
  */
 function highestProductOf3(arrayOfInts) {
   if (arrayOfInts.length < 3) {
@@ -33,6 +45,9 @@ function highestProductOf3(arrayOfInts) {
       highestProductOf3,
       current * highestProductOf2),
       current * lowestProductOf2);
+    /**
+     * Math.max([value1[, value2[, ...]]])
+     */
 
     // do we have a new highest product of two?
     highestProductOf2 = Math.max(Math.max(

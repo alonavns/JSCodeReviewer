@@ -1,5 +1,15 @@
-function highestProductOf3(arrayOfInts) {
+// Multi-line comments start with /* and end with */.
 
+/**
+ * Same as Aleksey but try to use ES6
+ * but not used properly
+ */
+
+function highestProductOf3(arrayOfInts) {
+/**
+ * if you want use ES6 code style then you can use arrow function?
+ * highestProductOf3 = (arrayOfInts) => {
+ */
     if (arrayOfInts.length < 3) {
         throw new Error('Less than 3 items!');
     }
@@ -21,6 +31,10 @@ function highestProductOf3(arrayOfInts) {
     // walk through items, starting at index 2
     for (let i = 2; i < arrayOfInts.length; i++) {
         let current = arrayOfInts[i];
+        /**
+         * if you want use ES6 code style then you should use const here
+         * const current = arrayOfInts[i];
+         */
 
         // do we have a new highest product of 3?
         // it's either the current highest,
