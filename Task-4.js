@@ -32,25 +32,17 @@ logIt();
  * https://www.interviewcake.com/question/javascript/permutation-palindrome
  */
 
-var test = ['civic', 'ivicc', 'civil', 'livci']
+const test = ['civic', 'ivicc', 'civil', 'livci']
 
 function permutationPalindrome(str) {
   const len = str.length;
-  let reputation = {};
+  let oddInfo = {};
   
   for (let i = 0; i < len; i++) {
-    reputation[str[i]] = reputation[str[i]] ? reputation[str[i]] + 1 : 1;
+    oddInfo[str[i]] ? delete oddInfo[str[i]] : oddInfo[str[i]] = true;
   }
 
-  let oddCount = 0;
-  for (let key in reputation) {
-    if (reputation[key] % 2 === 1) {
-      oddCount ++;
-      if (oddCount > 2) return false;
-    }
-  }
-  
-  return true;
+  return Object.keys(oddInfo).length <= 1;
 }
 
 for (let i = 0; i < test.length; i++) {
